@@ -17,14 +17,13 @@ export interface Todo {
 export const TodoService = {
   // Liste toutes les tâches
   getAll: async (): Promise<Todo[]> => {
-    // La méthode get() retourne les données sous l'objet `data` d'Axios
-    const response = await apiClient.get<Todo[]>('/todos/');
+    const response = await apiClient.get<Todo[]>('/api/todos/');
     return response.data;
   },
 
   // Créer une nouvelle tâche
   create: async (title: string): Promise<Todo> => {
-    const response = await apiClient.post<Todo>('/todos/', {
+    const response = await apiClient.post<Todo>('/api/todos/', {
       title,
       done: false, // Par défaut, une tâche n'est pas terminée
     });
@@ -33,12 +32,12 @@ export const TodoService = {
 
   // Mettre à jour une tâche (passer de terminé à pas terminé...)
   update: async (id: number, data: Partial<Todo>): Promise<Todo> => {
-    const response = await apiClient.patch<Todo>(`/todos/${id}/`, data);
+    const response = await apiClient.patch<Todo>(`/api/todos/${id}/`, data);
     return response.data;
   },
 
   // Supprimer une tâche
   delete: async (id: number): Promise<void> => {
-    await apiClient.delete(`/todos/${id}/`);
+    await apiClient.delete(`/api/todos/${id}/`);
   },
 };

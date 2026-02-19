@@ -10,6 +10,7 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
+import { Link } from 'expo-router';
 // On importe le service qui fait le lien avec Django
 import { Todo, TodoService } from '../src/api/todos';
 
@@ -96,8 +97,17 @@ export default function App() {
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Mes Objectifs Django</Text>
-        <Text style={styles.headerSubtitle}>Ultra-Professionnel 🔥</Text>
+        <View style={styles.headerRow}>
+          <View>
+            <Text style={styles.headerTitle}>Mes Objectifs</Text>
+            <Text style={styles.headerSubtitle}>Ultra-Professionnel 🔥</Text>
+          </View>
+          <Link href="/users" asChild>
+            <TouchableOpacity style={styles.userNavButton}>
+              <Text style={styles.userNavButtonText}>👥 Users</Text>
+            </TouchableOpacity>
+          </Link>
+        </View>
       </View>
 
       {/* Zone principale : Liste ou Chargement */}
@@ -188,14 +198,24 @@ const styles = StyleSheet.create({
     paddingTop: Platform.OS === 'ios' ? 60 : 40,
     paddingBottom: 20,
     paddingHorizontal: 20,
-    backgroundColor: '#4A90E2', // Bleu professionnel rassurant
+    backgroundColor: '#4A90E2',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 10,
-    elevation: 5, // Pour l'ombre sur Android
+  },
+  headerRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  userNavButton: {
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    borderRadius: 12,
+  },
+  userNavButtonText: {
+    color: '#FFF',
+    fontWeight: 'bold',
   },
   headerTitle: {
     fontSize: 28,

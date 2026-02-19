@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "ktbm12",
+    "slug": "ktbm12",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "mobile",
+    "icon": "./assets/images/7ba1ddd1e4ec7bb8da2cd1437062b4e7.jpg",
+    "scheme": "ktbm12",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

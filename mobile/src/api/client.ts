@@ -13,11 +13,9 @@ import { Platform } from 'react-native';
 
 const getBaseUrl = () => {
   if (Platform.OS === 'android') {
-    return 'http://10.0.2.2:8000/api'; // Adresse magique d'Android vers le localhost de la machine hôte
+    return 'http://10.0.2.2:8000'; // Racine du serveur Django
   }
-  // UTILISATION DE L'IP LOCALE (192.168.1.38) : 
-  // C'est indispensable pour que votre iPhone/Android puisse voir votre ordinateur sur le même réseau WiFi.
-  return 'http://192.168.1.38:8000/api'; 
+  return 'http://192.168.1.38:8000'; 
 };
 
 // Création de l'instance Axios
