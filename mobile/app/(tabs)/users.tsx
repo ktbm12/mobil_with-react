@@ -266,7 +266,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     alignItems: 'center',
   },
-  
   disabledButton: {
     backgroundColor: '#B19CD9',
   },
