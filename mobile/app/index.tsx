@@ -1,20 +1,23 @@
 import React from 'react';
-import {Text, TextInput, View} from 'react-native';
+import {Text, View} from 'react-native';
 
 const Cat = () => {
   return (
     <View>
-      <Text>Hello, I am...</Text>
-      <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 1,
-        }}
-        defaultValue="Name me!"
-      />
+      <Text>I am also a cat!</Text>
     </View>
   );
 };
 
-export default Cat;
+const Cafe = () => {
+  return (
+    <View>
+      <Text>Welcome!</Text>
+      <Cat />
+      <Cat />
+      <Cat />
+    </View>
+  );
+};
+
+export default Cafe;
