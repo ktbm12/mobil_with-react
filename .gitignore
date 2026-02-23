@@ -1,0 +1,51 @@
+# Node / React Native
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json
+.expo/
+.expo-shared/
+web-build/
+dist/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Android / iOS build
+android/app/build/
+ios/build/
+*.keystore
+*.p12
+*.jks
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# VSCode settings
+.vscode/
+
+# Python / Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+*.pyc
+*.pyo
+*.pyd
+venv/
+*.egg-info/
+*.egg
+
+# Django migrations (optionnel à versionner)
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# IDEs
+.idea/
+*.iml
