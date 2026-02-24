@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, FlatList} from 'react-native';
 
 const FlexDimensionsBasics = () => {
   return (
@@ -9,7 +9,18 @@ const FlexDimensionsBasics = () => {
     <View style={{flex: 1}}>
       <View style={{flex: 1, backgroundColor: 'powderblue'}} />
       <Text>Hello, I am your friend!</Text>
-      
+      <table>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+      </table>
       <View style={{flex: 2, backgroundColor: 'skyblue'}} />
       <View style={{flex: 3, backgroundColor: 'steelblue'}} />
     </View>
