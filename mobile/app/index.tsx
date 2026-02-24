@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 
 const FlexDimensionsBasics = () => {
   return (
@@ -8,6 +8,8 @@ const FlexDimensionsBasics = () => {
     // What if you add `height: 300` instead of `flex: 1`?
     <View style={{flex: 1}}>
       <View style={{flex: 1, backgroundColor: 'powderblue'}} />
+      <Text>Hello, I am your friend!</Text>
+      
       <View style={{flex: 2, backgroundColor: 'skyblue'}} />
       <View style={{flex: 3, backgroundColor: 'steelblue'}} />
     </View>
