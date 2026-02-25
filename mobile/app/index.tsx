@@ -63,8 +63,10 @@ export default function App() {
   // 3. Basculer l'état terminé/non-terminé d'une tâche (PATCH)
   const handleToggleTodo = async (todo: Todo) => {
     try {
+      console.log(`[DEBUG] Tentative de mise à jour pour le Todo #${todo.id}...`);
       // On demande au backend de mettre à jour
       const updatedTodo = await TodoService.update(todo.id, { done: !todo.done });
+      console.log(`[DEBUG] Succès ! Nouveau statut pour #${todo.id} : ${updatedTodo.done}`);
       // On met à jour visuellement notre liste
       setTodos((prevTodos) =>
         prevTodos.map((t) => (t.id === updatedTodo.id ? updatedTodo : t))
