@@ -15,8 +15,9 @@ const getBaseUrl = () => {
   if (Platform.OS === 'android') {
     return 'http://10.0.2.2:8000/api'; // Adresse magique d'Android vers le localhost de la machine hôte
   }
-  // Pour iOS, Web, ou si on utilise un vrai device (il faudrait alors mettre votre vraie IP locale Ex: 192.168.x.x)
-  return 'http://127.0.0.1:8000/api'; 
+  // UTILISATION DE L'IP LOCALE (192.168.1.38) : 
+  // C'est indispensable pour que votre iPhone/Android puisse voir votre ordinateur sur le même réseau WiFi.
+  return 'http://192.168.1.38:8000/api'; 
 };
 
 // Création de l'instance Axios
