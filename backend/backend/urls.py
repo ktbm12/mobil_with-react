@@ -19,6 +19,7 @@ urlpatterns = [
 
     # Tes routes API
     path('api/', include('api.urls')),
+    path('api/', include('users.urls')),
 
     # Swagger UI
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
